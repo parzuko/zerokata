@@ -40,9 +40,11 @@ class MainActivity : AppCompatActivity() {
 
         if(current_player == 1){
             latest_button.text = "X"
+            current_player = 2
 
         }else{
             latest_button.text ="O"
+            current_player = 1
         }
 
     }
