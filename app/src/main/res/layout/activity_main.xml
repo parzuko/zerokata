@@ -4,11 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".MainActivity">
 
     <TableLayout
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:id="@+id/tableLayout"
+        android:layout_width="313dp"
+        android:layout_height="303dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -16,28 +19,37 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="500dp">
 
             <Button
                 android:id="@+id/btn1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:background="@color/colorPrimary"
                 android:onClick="onClickButton"
-                android:textSize="30sp" />
+                android:text=""
+                android:textColor="#FFF"
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/btn2"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:onClick="onClickButton"
-                android:textSize="30sp" />
+                android:text=""
+                android:background="@color/colorPrimary"
+                android:textColor="#FFF"
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/btn3"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:onClick="onClickButton"
-                android:textSize="30sp" />
+                android:text=""
+                android:background="@color/colorPrimary"
+                android:textColor="#FFF"
+                android:textSize="50sp" />
         </TableRow>
 
         <TableRow
@@ -49,21 +61,30 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:onClick="onClickButton"
-                android:textSize="30sp" />
+                android:text=""
+                android:background="@color/colorPrimary"
+                android:textColor="#FFF"
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/btn5"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:onClick="onClickButton"
-                android:textSize="30sp" />
+                android:text=""
+                android:background="@color/colorPrimary"
+                android:textColor="#FFF"
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/btn6"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:onClick="onClickButton"
-                android:textSize="30sp" />
+                android:text=""
+                android:background="@color/colorPrimary"
+                android:textColor="#FFF"
+                android:textSize="50sp" />
         </TableRow>
 
         <TableRow
@@ -75,22 +96,43 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:onClick="onClickButton"
-                android:textSize="30sp" />
+                android:text=""
+                android:background="@color/colorPrimary"
+                android:textColor="#FFF"
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/btn8"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:onClick="onClickButton"
-                android:textSize="30sp" />
+                android:text=""
+                android:background="@color/colorPrimary"
+                android:textColor="#FFF"
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/btn9"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:onClick="onClickButton"
-                android:textSize="30sp" />
+                android:text=""
+                android:background="@color/colorPrimary"
+                android:textColor="#FFF"
+                android:textSize="50sp" />
         </TableRow>
 
     </TableLayout>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="322dp"
+        android:layout_height="629dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/thelegend" />
 </androidx.constraintlayout.widget.ConstraintLayout>

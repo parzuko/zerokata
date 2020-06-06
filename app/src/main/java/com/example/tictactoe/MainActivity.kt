@@ -51,8 +51,6 @@ class MainActivity : AppCompatActivity() {
 
         latest_button.isEnabled = false
 
-        println("player_1 list: $mover_1")
-        println("player_2 list: $mover_2")
 
     }
 }
