@@ -32,20 +32,27 @@ class MainActivity : AppCompatActivity() {
         start_game(latest_button, field_ID)
     }
 
-    var start_1 = ArrayList<Int>()
-    var start_2 = ArrayList<Int>()
+    var mover_1 = ArrayList<Int>()
+    var mover_2 = ArrayList<Int>()
     var current_player = 1
 
     private fun start_game(latest_button: Button, fieldId: Int) {
 
         if(current_player == 1){
             latest_button.text = "X"
+            mover_1.add(fieldId)
             current_player = 2
 
         }else{
             latest_button.text ="O"
+            mover_2.add(fieldId)
             current_player = 1
         }
+
+        latest_button.isEnabled = false
+
+        println("player_1 list: $mover_1")
+        println("player_2 list: $mover_2")
 
     }
 }
