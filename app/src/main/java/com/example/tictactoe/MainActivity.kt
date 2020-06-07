@@ -8,9 +8,14 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    var theButton = ArrayList<Button>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        theButton = arrayListOf(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9)
 
         game_info.text = ""
     }
@@ -106,6 +111,32 @@ class MainActivity : AppCompatActivity() {
                 1 -> game_info.text = "Player X Won!!"
                 2 -> game_info.text = "Player O Won!!"
             }
+
+            for(i in 0..8){
+                theButton[i].isEnabled = false
+            }
+
+            btnReset.visibility = View.VISIBLE
         }
+
+        if(checkWinner == 0 && (mover_1.size + mover_2.size == 0)){
+            game_info.text = "It's a draw :("
+            btnReset.visibility = View.VISIBLE
+        }
+    }
+
+    fun newGame(view: View){
+        mover_1.clear()
+        mover_2.clear()
+        checkWinner = 0
+        current_player = 1
+        game_info.text = "Current Player: X"
+
+        for(i in 0..8){
+            theButton[i].text = ""
+            theButton[i].isEnabled = true
+        }
+
+        btnReset.visibility = View.INVISIBLE
     }
 }
