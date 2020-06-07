@@ -2,14 +2,17 @@ package com.example.tictactoe
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
     var theButton = ArrayList<Button>()
+    var playerNumber = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +20,19 @@ class MainActivity : AppCompatActivity() {
 
         theButton = arrayListOf(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9)
 
-        game_info.text = ""
+        game_info.text = "Start Game!"
+
+        btn1Player.setOnClickListener{
+            playerNumber = 1
+            Toast.makeText(this,"Play Single Player Mode",Toast.LENGTH_SHORT).show()
+            newGame(btnReset)
+        }
+
+        btn2player.setOnClickListener{
+            playerNumber = 2
+            Toast.makeText(this,"Play With A Friend",Toast.LENGTH_SHORT).show()
+            newGame(btnReset)
+        }
     }
 
     fun onClickButton (view: View){
@@ -66,8 +81,23 @@ class MainActivity : AppCompatActivity() {
 
         checkWinner()
 
-        //Toast.makeText(this,"Active Player $current_player",Toast.LENGTH_SHORT).show()
+        if (playerNumber == 1 && current_player == 2 && checkWinner == 0){
 
+            Handler().postDelayed({autoPlay()},300)
+        }
+
+    }
+
+    fun autoPlay() {
+
+        var choosePosition = Random.nextInt(1,10)
+
+        // if random move is same as user's previous
+        while (mover_1.contains(choosePosition) || mover_2.contains(choosePosition)) {
+            choosePosition = Random.nextInt(1,10)
+        }
+
+        start_game(theButton[choosePosition - 1], choosePosition)
     }
 
     var checkWinner = 0 // 0: no winner, 1:X,2:O
