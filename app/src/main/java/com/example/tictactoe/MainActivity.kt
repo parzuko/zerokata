@@ -119,7 +119,7 @@ class MainActivity : AppCompatActivity() {
             btnReset.visibility = View.VISIBLE
         }
 
-        if(checkWinner == 0 && (mover_1.size + mover_2.size == 0)){
+        if(checkWinner == 0 && (mover_1.size + mover_2.size == 9)){
             game_info.text = "It's a draw :("
             btnReset.visibility = View.VISIBLE
         }

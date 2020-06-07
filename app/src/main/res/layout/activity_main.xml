@@ -11,6 +11,7 @@
         android:id="@+id/tableLayout"
         android:layout_width="313dp"
         android:layout_height="303dp"
+        android:layout_marginStart="12dp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,9 +36,9 @@
                 android:id="@+id/btn2"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:background="@color/colorPrimary"
                 android:onClick="onClickButton"
                 android:text=""
-                android:background="@color/colorPrimary"
                 android:textColor="#FFF"
                 android:textSize="50sp" />
 
@@ -45,9 +46,9 @@
                 android:id="@+id/btn3"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:background="@color/colorPrimary"
                 android:onClick="onClickButton"
                 android:text=""
-                android:background="@color/colorPrimary"
                 android:textColor="#FFF"
                 android:textSize="50sp" />
         </TableRow>
@@ -60,9 +61,9 @@
                 android:id="@+id/btn4"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:background="@color/colorPrimary"
                 android:onClick="onClickButton"
                 android:text=""
-                android:background="@color/colorPrimary"
                 android:textColor="#FFF"
                 android:textSize="50sp" />
 
@@ -70,9 +71,9 @@
                 android:id="@+id/btn5"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:background="@color/colorPrimary"
                 android:onClick="onClickButton"
                 android:text=""
-                android:background="@color/colorPrimary"
                 android:textColor="#FFF"
                 android:textSize="50sp" />
 
@@ -80,9 +81,9 @@
                 android:id="@+id/btn6"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:background="@color/colorPrimary"
                 android:onClick="onClickButton"
                 android:text=""
-                android:background="@color/colorPrimary"
                 android:textColor="#FFF"
                 android:textSize="50sp" />
         </TableRow>
@@ -95,9 +96,9 @@
                 android:id="@+id/btn7"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:background="@color/colorPrimary"
                 android:onClick="onClickButton"
                 android:text=""
-                android:background="@color/colorPrimary"
                 android:textColor="#FFF"
                 android:textSize="50sp" />
 
@@ -105,9 +106,9 @@
                 android:id="@+id/btn8"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:background="@color/colorPrimary"
                 android:onClick="onClickButton"
                 android:text=""
-                android:background="@color/colorPrimary"
                 android:textColor="#FFF"
                 android:textSize="50sp" />
 
@@ -115,9 +116,9 @@
                 android:id="@+id/btn9"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:background="@color/colorPrimary"
                 android:onClick="onClickButton"
                 android:text=""
-                android:background="@color/colorPrimary"
                 android:textColor="#FFF"
                 android:textSize="50sp" />
         </TableRow>
@@ -128,6 +129,7 @@
         android:id="@+id/imageView5"
         android:layout_width="322dp"
         android:layout_height="629dp"
+        android:layout_marginStart="18dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -140,6 +142,7 @@
         android:id="@+id/game_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="60dp"
         android:text="TextView"
@@ -153,9 +156,11 @@
         android:id="@+id/btnReset"
         android:layout_width="0dp"
         android:layout_height="60dp"
+        android:background="@drawable/reset_button"
         android:onClick="newGame"
-        android:text="New Game"
-        android:textSize="18sp"
+        android:text="Rematch?"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tableLayout"
